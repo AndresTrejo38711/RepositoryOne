@@ -473,7 +473,7 @@ public static int [][] banderaZAF(int height, int width){
       }else if (i < height*2/3) {
          for (int c = 0; c < width; c++) { //i es la fila y c la columna que en este bucle empieza en 0 y termina en 20
             flag[i][c] = WHITE;
-            if (i >= 5 && i <= 6) { //Anidado para hacer la linea verde del medio
+            if (i >= 5 && i <= 6) { 
                flag[i][c] = GREEN;
              }
        } 
@@ -489,23 +489,23 @@ public static int [][] banderaZAF(int height, int width){
  
   for (int i = 0; i < height; i++) { 
    
-  //PARTE SUPERIOR DEL TRIANGULO
+  //PARTE ARRIBA DEL TRIANGULO
   if (i < 6){
    ix ++;
    for (int c = 0; c < ix; c++) {
       flag[i][c] = GREEN;
-      if (c == ix-1 && c != 6) { //Anidado para hacer las últimas lineas blancas
+      if (c == ix-1 && c != 6) { 
          flag[i][c] = WHITE;
        }
   } 
   }
-  //PARTE INFERIOR DEL TRIANGULO
+  //PARTE ABAJO DEL TRIANGULO
   else {
    ix--;
     for (int c = 0; c <= ix; c++) {
      
       flag[i][c] = GREEN;
-      if (c == ix && c != 6) { //Anidado para hacer las últimas lineas blancas
+      if (c == ix && c != 6) { 
          flag[i][c] = WHITE;
        }
        
@@ -524,14 +524,14 @@ public static int [][] banderaZAF(int height, int width){
    ij ++;
    for (int c = 0; c < ij && c < 4; c++) {
       flag[i][c] = BLACK;
-      if (c == ij-1 || c == 0 && i == 2 || c == 4) { //Anidado para hacer las últimas lineas amarillas
+      if (c == ij-1 || c == 0 && i == 2 || c == 4) { 
          flag[i][c] = YELLOW;
        }
   } 
   }else if (i > 5 && i < 10) {
    for (int c = 0; c < ij && c < 4; c++) {
       flag[i][c] = BLACK;
-      if (c == ij-1 || c == 0 && i == 2 || c == 4) { //Anidado para hacer las últimas lineas amarillas
+      if (c == ij-1 || c == 0 && i == 2 || c == 4) { 
          flag[i][c] = YELLOW;
        }
   }ij --;
